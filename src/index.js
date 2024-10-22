@@ -6,6 +6,7 @@ import Header from './layout/Header'
 import Home from './pages/Home'
 import About from './pages/About'
 import Error404 from './pages/Error404'
+import './styles/base/_base.scss'
 
 const root = createRoot(document.getElementById('root'))
 
@@ -13,11 +14,13 @@ root.render(
   <React.StrictMode>
     <Router>
       <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="*" element={<Error404 />} />
-      </Routes>
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="*" element={<Error404 />} />
+        </Routes>
+      </main>
     </Router>
   </React.StrictMode>
 )

@@ -1,0 +1,59 @@
+@use '../abstract/variables' as *;
+@use '../abstract/functions' as *;
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  padding: rem(20) rem(20) rem(27);
+
+  @media #{$medium-screen} {
+    padding: rem(45) rem(50) rem(50);
+  }
+
+  @media #{$large-screen} {
+    max-width: $site-max-width;
+    margin: 0 auto;
+    padding: rem(45) rem(100) rem(50);
+  }
+
+  .logo {
+    width: 39vw;
+    max-width: rem(145);
+
+    @media #{$medium-screen} {
+      width: rem(210);
+      max-width: rem(210);
+    }
+  }
+
+  .main_nav {
+    a {
+      text-transform: uppercase;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: rem(12);
+
+      @media #{$medium-screen} {
+        text-transform: none;
+        font-size: rem(24);
+      }
+
+      &.active {
+        text-decoration: underline;
+      }
+
+      &:visited {
+        color: black;
+      }
+
+      &:not(:last-of-type) {
+        padding-right: rem(26);
+
+        @media #{$medium-screen} {
+          padding-right: rem(57);
+        }
+      }
+    }
+  }
+}
