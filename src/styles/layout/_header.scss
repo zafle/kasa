@@ -43,7 +43,8 @@ header {
         text-decoration: underline;
       }
 
-      &:visited {
+      &:visited,
+      &:active {
         color: black;
       }
 
