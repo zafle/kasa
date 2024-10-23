@@ -1,7 +1,7 @@
 @use '../abstract/variables' as *;
 @use '../abstract/functions' as *;
 
-header {
+.main_header {
   display: flex;
   justify-content: space-between;
   align-items: end;
@@ -11,7 +11,7 @@ header {
     padding: rem(45) rem(50) rem(50);
   }
 
-  @media #{$large-screen} {
+  @media #{$x-large-screen} {
     max-width: $site-max-width;
     margin: 0 auto;
     padding: rem(45) rem(100) rem(50);
@@ -21,7 +21,7 @@ header {
     width: 39vw;
     max-width: rem(145);
 
-    @media #{$medium-screen} {
+    @media #{$large-screen} {
       width: rem(210);
       max-width: rem(210);
     }
@@ -34,7 +34,7 @@ header {
       font-weight: 500;
       font-size: rem(12);
 
-      @media #{$medium-screen} {
+      @media #{$large-screen} {
         text-transform: none;
         font-size: rem(24);
       }
@@ -51,7 +51,7 @@ header {
       &:not(:last-of-type) {
         padding-right: rem(26);
 
-        @media #{$medium-screen} {
+        @media #{$large-screen} {
           padding-right: rem(57);
         }
       }

@@ -38,7 +38,7 @@ main {
   @media #{$medium-screen} {
     padding: 0 rem(50) rem(50);
   }
-  @media #{$large-screen} {
+  @media #{$x-large-screen} {
     max-width: $site-max-width;
     padding: 0 rem(100) rem(50);
   }

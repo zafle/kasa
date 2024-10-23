@@ -1,5 +1,6 @@
 // ######## COLORS ##########
-$primary-red: #ff6060;
+$primary-color: #ff6060;
+$secondary-color: black;
 
 // ######## GRADIENTS ##########
 // $layer-gradient: linear-gradient(rgb(255, 255, 255), #0A0A0A 42%, rgba(4, 4, 4, 0.41))
@@ -11,6 +12,8 @@ $base-font: 'Montserrat', sans-serif;
 $site-max-width: 1440px;
 
 // ######## RESPONSIVE BREAKPOINTS ##########
-$small-screen: 'only screen and (min-width: 376px)';
+$x-small-screen: 'only screen and (min-width: 376px)';
+$small-screen: 'only screen and (min-width: 485px)';
 $medium-screen: 'only screen and (min-width: 768px)';
 $large-screen: 'only screen and (min-width: 1024px)';
+$x-large-screen: 'only screen and (min-width: 1440px)';

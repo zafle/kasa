@@ -4,7 +4,7 @@ import '../../styles/layout/_header.scss'
 
 function Header() {
   return (
-    <header>
+    <header className="main_header">
       <Link to="/">
         <img src={logo} alt="logo Kasa" className="logo" />
       </Link>
