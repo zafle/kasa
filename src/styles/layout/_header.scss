@@ -12,7 +12,7 @@
     padding: rem(45) rem(50) rem(50);
   }
 
-  @media #{$x-large-screen} {
+  @media #{$plus-large-screen} {
     max-width: $site-max-width;
     margin: 0 auto;
     padding: rem(45) rem(100) rem(50);
