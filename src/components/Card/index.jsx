@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import '../../styles/components/_card.scss'
 
 function Card({ cover, title }) {
@@ -7,6 +8,11 @@ function Card({ cover, title }) {
       <h2>{title}</h2>
     </article>
   )
+}
+
+Card.propTypes = {
+  cover: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
 }
 
 export default Card

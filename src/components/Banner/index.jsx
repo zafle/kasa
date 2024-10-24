@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import '../../styles/components/_banner.scss'
 
 function Banner({ page, imageSrc, title }) {
@@ -7,6 +8,12 @@ function Banner({ page, imageSrc, title }) {
       {title ? <h1>{title}</h1> : null}
     </header>
   )
+}
+
+Banner.propTypes = {
+  page: PropTypes.string.isRequired,
+  imageSrc: PropTypes.string.isRequired,
+  title: PropTypes.string,
 }
 
 export default Banner
