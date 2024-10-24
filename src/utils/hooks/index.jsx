@@ -12,7 +12,6 @@ export function useFetch(path) {
       try {
         const response = await fetch(path)
         const data = await response.json()
-        console.log('++++ data ++++', data)
         setData(data)
       } catch (err) {
         console.log('+++++ error ++++', err)

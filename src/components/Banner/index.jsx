@@ -13,7 +13,7 @@ function Banner({ page, imageSrc, title }) {
 Banner.propTypes = {
   page: PropTypes.string.isRequired,
   imageSrc: PropTypes.string.isRequired,
-  title: PropTypes.string,
+  title: PropTypes.object,
 }
 
 export default Banner

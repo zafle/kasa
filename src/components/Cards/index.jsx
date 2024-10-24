@@ -1,12 +1,11 @@
 import { useFetch } from '../../utils/hooks'
 import Card from '../Card'
 import { Link } from 'react-router-dom'
-import { Loader } from '../../utils/atoms'
+import { Loader } from '../../utils/atoms/loader'
 import '../../styles/components/_cards.scss'
 
 function Cards() {
   const { data, isLoading, error } = useFetch('data/logements.json')
-
   const housings = data ? data : null
 
   if (error) {
@@ -18,9 +17,7 @@ function Cards() {
   }
 
   return isLoading ? (
-    <>
-      <Loader />
-    </>
+    <Loader />
   ) : (
     <section className="housings">
       {housings?.map((housing) => (
