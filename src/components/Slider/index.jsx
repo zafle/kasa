@@ -29,7 +29,7 @@ function Slider({ slides }) {
   }
 
   return (
-    <div className="slider">
+    <header className="slider">
       <img
         src={slides[slideIndex]}
         alt="diapositive du logement"
@@ -42,7 +42,7 @@ function Slider({ slides }) {
           {slideIndex + 1}/{slides.length}
         </span>
       ) : null}
-    </div>
+    </header>
   )
 }
 export default Slider
