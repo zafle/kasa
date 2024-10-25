@@ -1,0 +1,48 @@
+@use '../../assets/styles/abstract/variables' as *;
+@use '../../assets/styles/abstract/functions' as *;
+@use 'sass:list';
+
+.loader {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  &__content {
+    display: block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin: rem(100) auto;
+
+    & div {
+      position: absolute;
+      width: 6.4px;
+      height: 6.4px;
+      background: $primary-color;
+      border-radius: 50%;
+      animation: loader-spin 1.2s linear infinite;
+
+      // Loop to generate position items around a circle and generate animation delay
+      @for $i from 1 through 12 {
+        $position: circle-position($i, 12, 30px, 40px);
+        &:nth-child(#{$i}) {
+          animation-delay: -0.1s * ($i - 1);
+          top: list.nth($position, 1);
+          left: list.nth($position, 2);
+        }
+      }
+    }
+  }
+
+  @keyframes loader-spin {
+    0%,
+    20%,
+    80%,
+    100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.5);
+    }
+  }
+}

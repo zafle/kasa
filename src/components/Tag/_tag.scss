@@ -1,0 +1,22 @@
+@use '../../assets/styles/abstract/variables' as *;
+@use '../../assets/styles/abstract/functions' as *;
+
+.tag {
+  font-weight: 700;
+  text-align: center;
+  color: white;
+  border-radius: rem(10);
+  margin-right: rem(10);
+  background-color: $primary-color;
+  font-size: rem(10);
+  width: rem(48);
+  height: rem(18);
+  line-height: rem(18);
+
+  @media #{$large-screen} {
+    font-size: rem(14);
+    width: rem(115);
+    height: rem(25);
+    line-height: rem(25);
+  }
+}

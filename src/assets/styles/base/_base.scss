@@ -1,0 +1,51 @@
+@use '../abstract/variables' as *;
+@use '../abstract/functions' as *;
+
+/* ####### RESET ####### */
+* {
+  box-sizing: border-box;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+img {
+  display: block;
+  margin: 0;
+}
+
+// ######## GENERAL ##########
+body {
+  font-family: $base-font;
+  margin: 0 auto;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+main {
+  padding: 0 rem(20) rem(27);
+  margin: 0 auto;
+  width: 100%;
+
+  @media #{$medium-screen} {
+    padding: 0 rem(50) rem(50);
+  }
+  @media #{$plus-large-screen} {
+    max-width: $site-max-width;
+    padding: 0 rem(100) rem(50);
+  }
+}
