@@ -2,7 +2,8 @@ import { useParams } from 'react-router-dom'
 import { useFetch } from '../../utils/hooks'
 import { Loader } from '../../utils/atoms/loader'
 import Slider from '../../components/Slider'
-import Tag from '../../utils/atoms/tag'
+import Tags from '../../components/Tags'
+import Rating from '../../components/Rating'
 
 function Housing() {
   const { id } = useParams()
@@ -25,13 +26,8 @@ function Housing() {
       <Slider slides={housing.pictures} />
       <h1 className="housing-single__title">{housing.title}</h1>
       <h2 className="housing-single__subtitle">{housing.location}</h2>
-      <ul className="housing-single__tags">
-        {housing.tags.map((tag, index) => (
-          <li key={`tag-${index}`}>
-            <Tag tag={tag} />
-          </li>
-        ))}
-      </ul>
+      <Tags tags={housing.tags} />
+      <Rating rating={housing.rating} />
     </div>
   ) : (
     <p>Désolés, ce logement est introuvable.</p>

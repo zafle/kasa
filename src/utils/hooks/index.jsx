@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import PropTypes from 'prop-types'
 
 export function useFetch(path) {
   const [data, setData] = useState()
@@ -23,4 +24,8 @@ export function useFetch(path) {
     fetchData()
   }, [path])
   return { isLoading, data, error }
+}
+
+useFetch.propTypes = {
+  path: PropTypes.string.isRequired,
 }

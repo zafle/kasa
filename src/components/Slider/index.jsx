@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import SliderBtn from '../../utils/atoms/sliderbtn'
 import '../../styles/components/_slider.scss'
+import PropTypes from 'prop-types'
 
 function Slider({ slides }) {
   const [isSlider, setIsSlider] = useState(true)
@@ -45,4 +46,9 @@ function Slider({ slides }) {
     </header>
   )
 }
+
+Slider.propTypes = {
+  slides: PropTypes.array.isRequired,
+}
+
 export default Slider

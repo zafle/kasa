@@ -2,7 +2,6 @@
 @use '../abstract/functions' as *;
 
 .tag {
-  line-height: rem(18);
   font-weight: 700;
   text-align: center;
   color: white;
@@ -12,10 +11,12 @@
   font-size: rem(10);
   width: rem(48);
   height: rem(18);
+  line-height: rem(18);
 
   @media #{$large-screen} {
     font-size: rem(14);
     width: rem(115);
     height: rem(25);
+    line-height: rem(25);
   }
 }

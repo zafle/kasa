@@ -1,6 +1,7 @@
 import leftArrow from '../../assets/elements/left-arrow.png'
 import rightArrow from '../../assets/elements/right-arrow.png'
 import '../../styles/atoms/_sliderbtn.scss'
+import PropTypes from 'prop-types'
 
 function SliderBtn({ direction, moveSlide }) {
   return (
@@ -17,6 +18,11 @@ function SliderBtn({ direction, moveSlide }) {
       />
     </button>
   )
+}
+
+SliderBtn.propTypes = {
+  direction: PropTypes.string.isRequired,
+  moveSlide: PropTypes.func.isRequired,
 }
 
 export default SliderBtn

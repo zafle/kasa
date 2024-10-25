@@ -31,6 +31,7 @@ footer {
     @media #{$large-screen} {
       font-size: rem(24);
       width: 100%;
+      margin: rem(30) auto;
     }
   }
 }
