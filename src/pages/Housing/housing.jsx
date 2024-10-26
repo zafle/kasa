@@ -44,7 +44,7 @@ function Housing() {
         <div className="housing-single__details--two">
           <Rating
             classname="housing-single__details__rating"
-            rating={housing.rating}
+            rating={parseInt(housing.rating)}
           />
           <Host
             classname="housing-single__details__host"
