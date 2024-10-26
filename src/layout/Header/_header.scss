@@ -4,11 +4,12 @@
 .main_header {
   display: flex;
   justify-content: space-between;
-  align-items: end;
+  align-items: center;
   padding: rem(20) rem(20) rem(27);
   width: 100%;
 
   @media #{$medium-screen} {
+    align-items: end;
     padding: rem(45) rem(50) rem(50);
   }
 
