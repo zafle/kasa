@@ -1,0 +1,26 @@
+@use '../../assets/styles/abstract/variables' as *;
+@use '../../assets/styles/abstract/functions' as *;
+
+.rating {
+  display: flex;
+  justify-content: space-between;
+  width: rem(94);
+
+  @media #{$large-screen} {
+    width: rem(188);
+  }
+
+  &__star {
+    width: rem(13.4);
+    height: rem(13);
+
+    @media #{$large-screen} {
+      width: rem(24.75);
+      height: rem(24);
+    }
+
+    &--on path {
+      fill: $primary-color;
+    }
+  }
+}

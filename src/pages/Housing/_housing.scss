@@ -1,0 +1,80 @@
+@use '../../assets/styles/abstract/variables' as *;
+@use '../../assets/styles/abstract/functions' as *;
+
+.housing-single {
+  &__details {
+    display: flex;
+    flex-direction: column;
+    margin-top: rem(10);
+
+    @media #{$medium-screen} {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    @media #{$large-screen} {
+      margin-top: rem(24);
+    }
+
+    &--one {
+      @media #{$medium-screen} {
+        width: 70%;
+      }
+    }
+
+    &--two {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: rem(16);
+
+      @media #{$medium-screen} {
+        width: 30%;
+        flex-direction: column;
+        align-items: end;
+        margin-top: 0;
+      }
+    }
+
+    &__title {
+      font-size: rem(18);
+      font-weight: 500;
+      color: $primary-color;
+      line-height: 1.4;
+      margin-bottom: rem(7);
+
+      @media #{$large-screen} {
+        font-size: rem(36);
+      }
+    }
+
+    &__subtitle {
+      font-size: rem(14);
+      font-weight: 500;
+      line-height: 1.4;
+
+      @media #{$large-screen} {
+        font-size: rem(18);
+      }
+    }
+
+    &__tags {
+      display: flex;
+      margin-top: rem(10);
+
+      @media #{$large-screen} {
+        margin-top: rem(20);
+      }
+    }
+
+    &__rating {
+      @media #{$medium-screen} {
+        order: 1;
+      }
+    }
+    &__host {
+      @media #{$medium-screen} {
+        order: 0;
+      }
+    }
+  }
+}

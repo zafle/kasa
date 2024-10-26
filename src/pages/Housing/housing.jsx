@@ -4,6 +4,8 @@ import { Loader } from '../../components/Loader/loader.jsx'
 import Slider from '../../components/Slider/slider.jsx'
 import Tag from '../../components/Tag/tag.jsx'
 import Rating from '../../components/Rating/rating.jsx'
+import Host from '../../components/Host/host.jsx'
+import './_housing.scss'
 
 function Housing() {
   const { id } = useParams()
@@ -25,16 +27,32 @@ function Housing() {
   ) : housing ? (
     <main className="housing-single">
       <Slider slides={housing.pictures} />
-      <h1 className="housing-single__title">{housing.title}</h1>
-      <h2 className="housing-single__subtitle">{housing.location}</h2>
-      <ul className="housing-single__tags">
-        {housing.tags.map((tag, index) => (
-          <li key={`tag-${index}`}>
-            <Tag tag={tag} />
-          </li>
-        ))}
-      </ul>
-      <Rating rating={housing.rating} />
+      <div className="housing-single__details">
+        <div className="housing-single__details--one">
+          <h1 className="housing-single__details__title">{housing.title}</h1>
+          <h2 className="housing-single__details__subtitle">
+            {housing.location}
+          </h2>
+          <ul className="housing-single__details__tags">
+            {housing.tags.map((tag, index) => (
+              <li key={`tag-${index}`}>
+                <Tag tag={tag} />
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="housing-single__details--two">
+          <Rating
+            classname="housing-single__details__rating"
+            rating={housing.rating}
+          />
+          <Host
+            classname="housing-single__details__host"
+            name={housing.host.name}
+            picture={housing.host.picture}
+          />
+        </div>
+      </div>
     </main>
   ) : (
     <p>Désolés, ce logement est introuvable.</p>
