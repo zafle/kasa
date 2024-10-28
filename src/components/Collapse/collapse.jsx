@@ -9,7 +9,6 @@ function Collapse({ title, content, hasTwin }) {
 
   useEffect(() => {
     window.addEventListener('resize', handleResize)
-
     return () => {
       window.removeEventListener('resize', handleResize)
     }
@@ -19,7 +18,6 @@ function Collapse({ title, content, hasTwin }) {
     if (isOpen) {
       collapse_section.current.style.maxHeight = null
       collapse_section.current.style.height = null
-
       resizeCollapse()
     }
   }

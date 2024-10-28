@@ -25,7 +25,7 @@ function Housing() {
   return isLoading ? (
     <Loader />
   ) : housing ? (
-    <main className="housing-single">
+    <div className="housing-single">
       <Slider slides={housing.pictures} />
       <div className="housing-single__details">
         <div className="housing-single__details--one">
@@ -65,7 +65,7 @@ function Housing() {
           hasTwin={true}
         />
       </div>
-    </main>
+    </div>
   ) : (
     <Navigate to="/error404" replace={true} />
   )

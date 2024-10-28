@@ -6,7 +6,7 @@ import './_about.scss'
 
 function About() {
   return (
-    <main className="about">
+    <div className="about">
       <Banner page="about" imageSrc={Illustration} />
       <div className="about__content">
         {content.map((item, index) => (
@@ -17,7 +17,7 @@ function About() {
           />
         ))}
       </div>
-    </main>
+    </div>
   )
 }
 export default About

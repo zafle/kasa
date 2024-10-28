@@ -32,22 +32,16 @@ body {
   margin: 0 auto;
 }
 
-#root {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-}
+// main {
+//   padding: 0 rem(20) rem(27);
+//   margin: 0 auto;
+//   width: 100%;
 
-main {
-  padding: 0 rem(20) rem(27);
-  margin: 0 auto;
-  width: 100%;
-
-  @media #{$medium-screen} {
-    padding: 0 rem(50) rem(50);
-  }
-  @media #{$plus-large-screen} {
-    max-width: $site-max-width;
-    padding: 0 rem(100) rem(50);
-  }
-}
+//   @media #{$medium-screen} {
+//     padding: 0 rem(50) rem(50);
+//   }
+//   @media #{$plus-large-screen} {
+//     max-width: $site-max-width;
+//     padding: 0 rem(100) rem(50);
+//   }
+// }

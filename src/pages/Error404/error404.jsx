@@ -3,7 +3,7 @@ import './_error404.scss'
 
 function Error404() {
   return (
-    <main className="error__page">
+    <div className="error__page">
       <h1 className="error__page__title">404</h1>
       <p className="error__page__text">
         Oups ! La page que vous demandez n'existe pas.
@@ -11,7 +11,7 @@ function Error404() {
       <Link className="error__page__link" to="/">
         Retourner sur la page d'accueil
       </Link>
-    </main>
+    </div>
   )
 }
 

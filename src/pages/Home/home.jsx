@@ -4,7 +4,7 @@ import Cards from '../../components/Cards/cards.jsx'
 
 function Home() {
   return (
-    <main>
+    <div>
       <Banner
         page="home"
         imageSrc={Illustration}
@@ -15,7 +15,7 @@ function Home() {
         }
       />
       <Cards />
-    </main>
+    </div>
   )
 }
 export default Home
