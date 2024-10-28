@@ -5,6 +5,7 @@ import Slider from '../../components/Slider/slider.jsx'
 import Tag from '../../components/Tag/tag.jsx'
 import Rating from '../../components/Rating/rating.jsx'
 import Host from '../../components/Host/host.jsx'
+import Collapse from '../../components/Collapse/collapse.jsx'
 import './_housing.scss'
 
 function Housing() {
@@ -52,6 +53,18 @@ function Housing() {
             picture={housing.host.picture}
           />
         </div>
+      </div>
+      <div className="housing-single__info">
+        <Collapse
+          title="Description"
+          content={housing.description}
+          hasTwin={true}
+        />
+        <Collapse
+          title="Équipements"
+          content={housing.equipments}
+          hasTwin={true}
+        />
       </div>
     </main>
   ) : (

@@ -59,6 +59,7 @@
 
     &__tags {
       display: flex;
+      flex-wrap: wrap;
       margin-top: rem(10);
 
       @media #{$large-screen} {
@@ -75,6 +76,33 @@
       @media #{$medium-screen} {
         order: 0;
       }
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    margin-top: rem(13);
+
+    & > div:not(:last-child) {
+      margin-bottom: rem(20);
+    }
+
+    @media #{$medium-screen} {
+      display: flex;
+      flex-direction: row;
+      gap: rem(76);
+
+      & > div {
+        flex-basis: 50%;
+      }
+      & > div:not(:last-child) {
+        margin-bottom: 0;
+      }
+    }
+
+    @media #{$large-screen} {
+      margin-top: rem(31);
     }
   }
 }
