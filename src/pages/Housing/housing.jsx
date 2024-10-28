@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom'
+import { useParams, Navigate } from 'react-router-dom'
 import { useFetch } from '../../utils/hooks/hooks.jsx'
 import { Loader } from '../../components/Loader/loader.jsx'
 import Slider from '../../components/Slider/slider.jsx'
@@ -11,7 +11,6 @@ import './_housing.scss'
 function Housing() {
   const { id } = useParams()
   const { data, isLoading, error } = useFetch('../data/logements.json')
-  console.log('+++ id param +++', id)
 
   const housing = data?.find((item) => item.id === id)
 
@@ -68,7 +67,7 @@ function Housing() {
       </div>
     </main>
   ) : (
-    <p>Désolés, ce logement est introuvable.</p>
+    <Navigate to="/error404" replace={true} />
   )
 }
 

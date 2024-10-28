@@ -60,6 +60,7 @@
     &__tags {
       display: flex;
       flex-wrap: wrap;
+      gap: rem(10);
       margin-top: rem(10);
 
       @media #{$large-screen} {

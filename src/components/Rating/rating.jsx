@@ -3,7 +3,6 @@ import './_rating.scss'
 import PropTypes from 'prop-types'
 
 function Rating({ rating, classname }) {
-  console.log('+++++ rating = +++++', rating)
   const stars = []
   for (let i = 0; i < 5; i++) {
     const starClass = i + 1 <= rating ? 'rating__star--on' : 'rating__star--off'
