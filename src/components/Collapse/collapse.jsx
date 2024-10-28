@@ -89,6 +89,7 @@ function Collapse({ title, content, hasTwin }) {
 Collapse.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
+  hasTwin: PropTypes.bool,
 }
 
 export default Collapse

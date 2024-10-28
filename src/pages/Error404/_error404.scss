@@ -1,0 +1,56 @@
+@use '../../assets/styles/abstract/variables' as *;
+@use '../../assets/styles/abstract/functions' as *;
+
+.error__page {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  row-gap: rem(113);
+  margin: rem(113) 0;
+  padding-bottom: 0;
+
+  @media #{$large-screen} {
+    row-gap: rem(139);
+    margin: rem(139) 0;
+  }
+
+  &__title {
+    color: $primary-color;
+    font-weight: 700;
+    font-size: rem(96);
+    height: rem(100);
+    line-height: rem(100);
+
+    @media #{$large-screen} {
+      font-size: rem(288);
+      height: rem(260);
+      line-height: rem(260);
+    }
+  }
+
+  &__text {
+    color: $primary-color;
+    font-weight: 500;
+    font-size: rem(18);
+
+    @media #{$large-screen} {
+      font-size: rem(36);
+    }
+  }
+
+  &__link {
+    font-weight: 500;
+    font-size: rem(14);
+
+    &:active,
+    &:visited {
+      color: black;
+    }
+
+    @media #{$large-screen} {
+      font-size: rem(18);
+    }
+  }
+}

@@ -1,0 +1,16 @@
+@use '../../assets/styles/abstract/variables' as *;
+@use '../../assets/styles/abstract/functions' as *;
+
+.about {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(20);
+    margin-top: rem(20);
+
+    @media #{$large-screen} {
+      row-gap: rem(30);
+      margin-top: rem(38);
+    }
+  }
+}
