@@ -4,7 +4,6 @@
 .collapse {
   display: flex;
   flex-direction: column;
-  //   height: max-content;
 
   @media #{$medium-screen} {
     font-size: rem(18);

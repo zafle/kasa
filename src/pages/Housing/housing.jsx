@@ -22,9 +22,13 @@ function Housing() {
     )
   }
 
+  if (!isLoading && !housing) {
+    return <Navigate to="/error404" replace={true} />
+  }
+
   return isLoading ? (
     <Loader />
-  ) : housing ? (
+  ) : (
     <div className="housing-single">
       <Slider slides={housing.pictures} />
       <div className="housing-single__details">
@@ -66,8 +70,6 @@ function Housing() {
         />
       </div>
     </div>
-  ) : (
-    <Navigate to="/error404" replace={true} />
   )
 }
 
