@@ -6,7 +6,6 @@ function Home() {
   return (
     <div>
       <Banner
-        page="home"
         imageSrc={Illustration}
         title={
           <>
