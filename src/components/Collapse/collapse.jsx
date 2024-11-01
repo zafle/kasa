@@ -16,6 +16,7 @@ function Collapse({ title, content, hasTwin }) {
 
   function handleResize() {
     if (isOpen) {
+      // reset CSS maxHeight and height to be able to get scrollHeight in the resizeCollapse function
       collapse_section.current.style.maxHeight = null
       collapse_section.current.style.height = null
       resizeCollapse()
@@ -23,17 +24,40 @@ function Collapse({ title, content, hasTwin }) {
   }
 
   function getMaxHeight() {
+    // get all collapse components on the page
     const allCollapsesComponents =
       document.querySelectorAll('.collapse__content')
+
     const allCollapsesHeight = []
+
     allCollapsesComponents.forEach((element) => {
+      // save current maxHeight and height of the element
+      const elementMaxHeight = element.style.maxHeight
+      const elementHeight = element.style.height
+
+      // reset CSS maxHeight and height to be able to get scrollHeight
+      element.style.maxHeight = null
+      element.style.height = null
+
+      // push scrollHeight value in an arrray
       allCollapsesHeight.push(element.scrollHeight)
+
+      // cancel reset
+      element.style.maxHeight = elementMaxHeight
+      element.style.height = elementHeight
     })
+
+    // return the max scrollHeight value
     return Math.max(...allCollapsesHeight)
   }
 
   function resizeCollapse() {
-    const isMaxHeight = window.innerWidth > 767 && hasTwin ? true : false
+    // when several collapse components are in a row, we want them to have same height when opened
+
+    // check if this collapse has a twin collapse (hasTwin === true)
+    // and if they are configured to appear in row when window.innerWidth > 767
+    // to know if this collapse height should be its own or the highest from all twins
+    const isMaxHeight = window.innerWidth > 767 && hasTwin
 
     const collapseHeight = isMaxHeight
       ? getMaxHeight() + 'px'
@@ -45,6 +69,7 @@ function Collapse({ title, content, hasTwin }) {
   function toggleCollapse() {
     if (isOpen) {
       collapse_section.current.style.maxHeight = null
+      collapse_section.current.style.height = null
     } else {
       resizeCollapse()
     }

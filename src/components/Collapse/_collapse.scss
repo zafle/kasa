@@ -59,10 +59,9 @@
     border-radius: rem(5);
     margin-top: rem(-30);
     padding-top: rem(30);
-    max-height: rem(30);
+    max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
-    height: 100%;
 
     @media #{$large-screen} {
       margin-top: rem(-52);
