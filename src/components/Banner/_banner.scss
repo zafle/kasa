@@ -19,12 +19,12 @@
     height: rem(111);
     width: 100%;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: rem(10);
 
     @media #{$large-screen} {
       height: rem(223);
       box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-      border-radius: 25px;
+      border-radius: rem(25);
     }
   }
 

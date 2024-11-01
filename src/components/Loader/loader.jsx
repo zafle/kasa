@@ -4,18 +4,9 @@ export const Loader = () => {
   return (
     <div className="loader">
       <div className="loader__content">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+        {[...Array(12)].map((index) => (
+          <div key={`loader-${index}`}></div>
+        ))}
       </div>
     </div>
   )
