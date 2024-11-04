@@ -1,7 +1,7 @@
 import { useFetch } from '../../utils/hooks/hooks.jsx'
 import Card from '../Card/card.jsx'
 import { Link } from 'react-router-dom'
-import { Loader } from '../Loader/loader.jsx'
+import Loader from '../Loader/loader.jsx'
 import './_cards.scss'
 
 function Cards() {

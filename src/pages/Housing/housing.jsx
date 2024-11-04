@@ -1,6 +1,6 @@
 import { useParams, Navigate } from 'react-router-dom'
 import { useFetch } from '../../utils/hooks/hooks.jsx'
-import { Loader } from '../../components/Loader/loader.jsx'
+import Loader from '../../components/Loader/loader.jsx'
 import Slider from '../../components/Slider/slider.jsx'
 import Tag from '../../components/Tag/tag.jsx'
 import Rating from '../../components/Rating/rating.jsx'
