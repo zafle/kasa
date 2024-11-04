@@ -3,17 +3,16 @@ import './_rating.scss'
 import PropTypes from 'prop-types'
 
 function Rating({ rating, classname }) {
-  const stars = []
-  for (let i = 0; i < 5; i++) {
-    const starClass = i + 1 <= rating ? 'rating__star--on' : 'rating__star--off'
-    stars.push(<Star className={`rating__star ${starClass}`} />)
-  }
   return (
-    <ul className={`rating ${classname ? classname : ''}`}>
-      {stars.map((star, index) => (
-        <li key={`star-${index}`}>{star}</li>
-      ))}
-    </ul>
+    <div className={`rating ${classname ? classname : ''}`}>
+      {[...Array(5)].map((element, index) => {
+        const starClass =
+          index + 1 <= rating ? 'rating__star--on' : 'rating__star--off'
+        return (
+          <Star key={`star-${index}`} className={`rating__star ${starClass}`} />
+        )
+      })}
+    </div>
   )
 }
 
